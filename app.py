@@ -4,9 +4,9 @@ import numpy as np
 import soundfile as sf
 import io
 
-st.set_page_config(page_title="ZampoÒAPP", layout="centered")
-st.title("?? ZampoÒAPP: RetroalimentaciÛn musical autom·tica")
-st.markdown("Sube tu grabaciÛn de zampoÒa para recibir retroalimentaciÛn inmediata.")
+st.set_page_config(page_title="Zampo√±APP", layout="centered")
+st.title("?? Zampo√±APP: Retroalimentaci√≥n musical autom√°tica")
+st.markdown("Sube tu grabaci√≥n de zampo√±a para recibir retroalimentaci√≥n inmediata.")
 
 # Cargar el audio modelo
 modelo_audio, modelo_sr = librosa.load("modelo.wav", sr=None)
@@ -25,8 +25,8 @@ if archivo is not None:
     st.audio(archivo, format="audio/wav")
 
     if distancia < 50:
-        st.success("?? °Muy bien! Tu ejecuciÛn est· muy cercana al modelo.")
+        st.success("?? ¬°Muy bien! Tu ejecuci√≥n est√° muy cercana al modelo.")
     elif distancia < 100:
-        st.warning("?? Aceptable. Puedes mejorar ritmo o afinaciÛn.")
+        st.warning("?? Aceptable. Puedes mejorar ritmo o afinaci√≥n.")
     else:
-        st.error("? Requiere mejora. Practica un poco m·s con ayuda del docente.")
+        st.error("? Requiere mejora. Practica un poco m√°s con ayuda del docente.")
